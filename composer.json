@@ -1,0 +1,30 @@
+{
+    "name": "undkonsorten/js-consent",
+    "type": "typo3-cms-extension",
+    "description": "JS consent",
+    "homepage": "https://www.undkonsorten.com",
+    "authors": [
+		{
+			"name": "Eike Starkmann",
+			"email": "starkmann@undkonsorten.com",
+			"homepage": "http://undkonsorten.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Felix Althaus",
+			"email": "althaus@undkonsorten.com",
+			"homepage": "http://undkonsorten.com",
+			"role": "Developer"
+		}
+    ],
+    "license": ["GPL-2.0+"],
+    "keywords": ["js consent", "TYPO3", "warnig", "dsgvo"],
+    "require": {
+        "typo3/cms": ">=8.7"
+    },
+    "autoload": {
+		"psr-4": {
+		 "Undkonsorten\\JsConsent\\": "Classes"
+		}
+  }
+}
