@@ -1,3 +1,34 @@
-plugin.tx_jsconsent {
+tx_jsconsent_page = PAGE
+tx_jsconsent_page {
+    typeNum = {$plugin.tx_jsconsent.pageType}
+    #10 = TEXT
+    #10.data = GP:referrer
+    20 = USER
+    20.userFunc = Undkonsorten\JsConsent\Cookie\CookieUtility->setCookie
+    meta.refresh = 0; {GP:referrer}
+    meta.refresh.insertData = 1
+
 
 }
+
+plugin.tx_jsconsent {
+    consent = FLUIDTEMPLATE
+    consent {
+        templateName = JsConsent
+        templateRootPaths.0 = EXT:js_consent/Resources/Private/Templates/
+        extbase.controllerExtensionName = JsConsent
+        variables {
+            pageUid = TEXT
+            pageUid.data = TSFE:id
+            referrer = TEXT
+            referrer.data = getIndpEnv:TYPO3_REQUEST_URL
+            #referrer.rawUrlEncode = 1
+        }
+        settings.pageType = {$plugin.tx_jsconsent.pageType}
+    }
+}
+
+[globalVar = _COOKIE|jsconsent = 1]
+[else]
+    page.{$plugin.tx_jsconsent.pageObject} =< plugin.tx_jsconsent.consent
+[end]

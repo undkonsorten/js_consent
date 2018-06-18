@@ -1,0 +1,7 @@
+plugin.tx_jsconsent {
+    link.color = #8a8a8a
+    link.colorHover = #717171
+    button.background = #8a8a8a
+    button.backgroundHover = #717171
+    button.color = #fff
+}

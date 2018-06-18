@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+
+<div class="js-consent active">
+    <p>
+        <f:translate key="jsConsent.text" />
+    </p>
+    <f:link.page pageUid="{pageUid}" pageType="{settings.pageType}" additionalParams="{referrer:referrer}">
+        <f:translate key="jsConsent.buttontext" default="OK" />
+    </f:link.page>
+</div>
+
+</html>

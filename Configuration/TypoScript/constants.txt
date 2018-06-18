@@ -1,3 +1,4 @@
 plugin.tx_jsconsent {
-
+    pageType = 1529320204
+    pageObject = 1529326456
 }
