@@ -3,19 +3,17 @@ Extension Manual
 
 Description:
 -----------
-This extension adds faetures to the [powermail](https://github.com/einpraegsam/powermail) extension.
-
-When a user fills a powermail form he will get a download link for a pdf file which contains the values he just entered. 
-Also the pdf can be attached to an email and send to the user.
+This extension will show a warning when a user visits the website without activated javascript.
 
 
 
 Features:
 -----------
-1. Add a download link to the (filled) pdf or given file.
-2. Attaches the file
+1. Shows a warning on every entrance url
+2. Sets a cookie when user accepted the warning, so that it will only be shown once
+3. Redirects to the referrer page
 
-![inline](Documentation/Images/manual_html_m77f4e49b.png)
+![inline](jsconsent.png)
 
 
 
@@ -23,12 +21,7 @@ Installation:
 -----------
 1. Install the extension.
 
-2. To enable the extension you have to set plugin.tx_powermailpdf.settings.enablePowermailPdf = 1. 
-You can add this to the TS of a page where the powermail formular is located.
-This is important if you have more powermail forms but just one needs the pdf filling feature.
+2. Include Static Typoscript
 
-[Detailed Documentation](https://docs.typo3.org/typo3cms/extensions/powermailpdf/Index.html)
-
-[Blog Post (German)](http://blog.undkonsorten.com/eigene-extension-vorgestellt-powermailpdf) 
-
+3. Optional: Also include Basic Css
 
